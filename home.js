@@ -116,7 +116,7 @@ const deals = [
     }, 
     {
         title: 'Free Kids Meal with 2 Regular Entrees', 
-        desc: '   This deal lasts until the end of March! '
+        desc: ' This deal lasts until the end of March! '
     }
 ]
 
@@ -130,11 +130,8 @@ const deals = [
 */
 
 //CODE HERE
-let newDeal = (param1) => {
-    deals.title = deals.title.replace(`15% Off!`, "10% Off!");
-
-}
-console.log(newDeal())
+deals[0].title = deals[0].title.replace(`15% Off!`, "10% Off!")
+console.log(deals[0])
 
 
 
@@ -153,3 +150,5 @@ console.log(newDeal())
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace(`March!`, `April`)
+console.log(deals[1])

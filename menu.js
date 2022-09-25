@@ -99,7 +99,49 @@ console.log(pizza.category)
 */
 
 //CODE HERE
-let foodArr = ["why", 123, 1, 1, "great for kids"];
+let foodArr = [
+    {
+        name: "sandwitch",
+        price: 12.13,
+        category: "entree",
+        popularity: 3,
+        rating: 4,
+        tags: ["Yummy"],
+    },
+    {
+    name: "Tomato",
+    price: 12.13,
+    category: "entree",
+    popularity: 3,
+    rating: 4,
+    tags: ["kinda ok"]
+   },
+   {
+name: "pancake",
+price: 14,
+category: "appetizer",
+popularity: 9,
+rating: 5,
+tags: ["Breakfast"],
+},
+{
+name: "cake",
+price: 11,
+category: "Dessert",
+popularity: 3,
+rating: 4,
+tags: ["not healthy"],
+},
+{
+name: "Apple",
+price: 12.13,
+category: "Fruit",
+popularity: 7,
+rating: 7,
+tags: ["healthy"],
+},
+]
+
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -162,6 +204,31 @@ let call = () => {
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+    let filteredArr = [];
+    //price is below 10 dollars
+    //price is property
+    //pizzaObj.property < number
+    //if(type is above) {
+       // filter our array and check if property greater than number
+
+   // }
+    //else{
+        //filter our array and check if property less than number
+    //}
+   // return filteredArr;
+   if(type === "above") {
+    filteredArr = foodArr.filter( (pizza_obj) => pizza_obj[property] > number )
+    
+}
+else {filteredArr = foodArr.filter( (pizza_obj) =>  pizza_obj[property] < number)
+return filteredArr
+}
+}
+
+
+
+
 
 
 /*
@@ -172,3 +239,4 @@ let call = () => {
 */
 
 //CODE HERE
+console.log(filterByProperty("price", 4, "above"))
