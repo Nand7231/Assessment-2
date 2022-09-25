@@ -222,8 +222,9 @@ const filterByProperty = (property, number, type) => {
     
 }
 else {filteredArr = foodArr.filter( (pizza_obj) =>  pizza_obj[property] < number)
-return filteredArr
 }
+return filteredArr
+
 }
 
 
